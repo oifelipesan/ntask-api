@@ -23,3 +23,5 @@ And there's more in the project [package.json](https://github.com/oifelipesan/nt
 ## About
 
 [Building REST APIs with Node.js](https://www.casadocodigo.com.br/products/livro-apis-nodejs) - Visit the Code House website.
+
+> Thank you [@Caio Ribeiro Pereira](https://twitter.com/crp_underground?lang=en). Building APIs with Node.js was an awesome read and it was succint.
