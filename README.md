@@ -1,5 +1,7 @@
 # Ntask API
 
+## Overview
+
 Node.js API for task management.
 This is an educational project about how to create an API using Node.js with SQL database and JSON Web Token authentication.
 
