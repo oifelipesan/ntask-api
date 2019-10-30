@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "build": "npx sequelize db:migrate"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
