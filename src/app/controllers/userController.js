@@ -98,7 +98,7 @@ module.exports = {
         return badRequestMessage('User not fould.', res)
       }
 
-      User.update(req.body, { where: { id }, individualHooks: true })
+      await User.update(req.body, { where: { id }, individualHooks: true })
 
       const updatedUser = await User.findOne({
         where: { id },
