@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config()
 
 module.exports = {
   development: {
@@ -30,4 +30,4 @@ module.exports = {
     dialect: "mysql",
     operatorsAliases: false
   }
-};
+}

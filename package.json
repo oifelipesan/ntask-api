@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/server.js",
+    "test": "NODE_ENV=test mocha test/**/*.js",
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
@@ -21,7 +22,10 @@
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
     "nodemon": "^1.19.3",
-    "sqlite3": "^4.1.0"
+    "sqlite3": "^4.1.0",
+    "supertest": "^4.0.2"
   }
 }
