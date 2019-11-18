@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const helmet = require('helmet')
 const auth = require('./app/middlewares/auth')
+const cors = require('cors')
 
 const { port } = require('./config')
 const app = express()
@@ -14,6 +15,7 @@ app.use(helmet())
 
 app.disable('x-powered-by')
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(auth.initialize())
