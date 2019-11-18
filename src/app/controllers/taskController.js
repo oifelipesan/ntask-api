@@ -58,7 +58,7 @@ module.exports = {
     try {
       const task = await Task.findOne({
         where: { id, UserId },
-        attributes: { exclude: ['id', 'UserId'] }
+        attributes: { exclude: ['UserId'] }
       })
 
       if (!task) {
