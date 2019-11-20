@@ -12,10 +12,8 @@
       "dest": "/index.js"
     }
   ],
-  "build": {
-    "env": {
-      "JWT_SECRET": "Nta$k-AP1",
-      "NODE_ENV": "development"
-    }
+  "env": {
+    "JWT_SECRET": "Nta$k-AP1",
+    "NODE_ENV": "development"
   }
 }
