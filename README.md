@@ -10,6 +10,8 @@ This is an educational project about how to create an API using Node.js with SQL
 - [Express](http://expressjs.com/) - Web Framework.
 - [Sequelize](http://docs.sequelizejs.com/en/latest/) - ORM compatible with SQL databases.
 - [Passport](http://passportjs.org/) - Middleware for user authentication.
+- [Mocha](https://mochajs.org/) - Test Runner for Node.js.
+- [Chai](https://www.chaijs.com/) - BDD and TDD interface for test implementation.
 
 And there's more in the project [package.json](https://github.com/oifelipesan/ntask-api/blob/master/package.json).
 
