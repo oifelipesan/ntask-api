@@ -14,7 +14,8 @@
   ],
   "build": {
     "env": {
-      "JWT_SECRET": "Nta$k-AP1"
+      "JWT_SECRET": "Nta$k-AP1",
+      "NODE_ENV": "development"
     }
   }
 }
