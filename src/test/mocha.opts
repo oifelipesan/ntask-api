@@ -1,3 +1,4 @@
---require test/helpers
+--recursive
+--require src/test/helpers.js
 --reporter spec
 --slow 5000
