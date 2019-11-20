@@ -7,6 +7,10 @@ module.exports = {
   async auth(req, res) {
     const { email, password } = req.body
 
+    if (!email || !password) {
+      return res.status(400).json({ error: 'Email and Password required' })
+    }
+
     if (email && password) {
       const user = await User.findOne({ where: { email } })
 
