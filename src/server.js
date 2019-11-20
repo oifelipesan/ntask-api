@@ -1,16 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const helmet = require('helmet')
-const auth = require('./src/app/middlewares/auth')
+const auth = require('./app/middlewares/auth')
 const cors = require('cors')
 
-const { port, env } = require('./src/config')
+const { port, env } = require('./config')
 const app = express()
 
-const routerUser = require('./src/routes/user')
-const routerTask = require('./src/routes/task')
-const routerAuth = require('./src/routes/auth')
-const routerApi = require('./src/routes/api')
+const routerUser = require('./routes/user')
+const routerTask = require('./routes/task')
+const routerAuth = require('./routes/auth')
+const routerApi = require('./routes/api')
 
 app.use(helmet())
 

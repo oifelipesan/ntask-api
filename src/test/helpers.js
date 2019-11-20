@@ -1,6 +1,6 @@
 const supertest = require('supertest')
 const chai = require('chai')
-const app = require('../../server')
+const app = require('../server')
 
 global.app = app
 global.request = supertest(app)
