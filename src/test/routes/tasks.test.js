@@ -56,6 +56,15 @@ describe('Routes: Tasks', () => {
           })
       })
     })
+
+    describe('status 401', () => {
+      it('throws error when user not is authenticated', done => {
+        request
+          .get('/tasks')
+          .expect(401)
+          .end((err, res) => done(err))
+      })
+    })
   })
 
   describe('POST /tasks/', () => {
@@ -96,6 +105,15 @@ describe('Routes: Tasks', () => {
           })
       })
     })
+
+    describe('status 401', () => {
+      it('throws error when user not is authenticated', done => {
+        request
+          .post('/tasks')
+          .expect(401)
+          .end((err, res) => done(err))
+      })
+    })
   })
 
   describe('GET /tasks/:id', () => {
@@ -123,6 +141,15 @@ describe('Routes: Tasks', () => {
           })
       })
     })
+
+    describe('status 401', () => {
+      it('throws error when user not is authenticated', done => {
+        request
+          .get('/tasks')
+          .expect(401)
+          .end((err, res) => done(err))
+      })
+    })
   })
 
   describe('PUT /tasks/:id', () => {
@@ -147,6 +174,15 @@ describe('Routes: Tasks', () => {
           .end((err, res) => done(err))
       })
     })
+
+    describe('status 401', () => {
+      it('throws error when user not is authenticated', done => {
+        request
+          .put('/tasks')
+          .expect(401)
+          .end((err, res) => done(err))
+      })
+    })
   })
 
   describe('DELETE /tasks/:id', () => {
@@ -168,6 +204,15 @@ describe('Routes: Tasks', () => {
           .set('Authorization', `bearer ${token}`)
           .send({ UserId: `${userId}` })
           .expect(400)
+          .end((err, res) => done(err))
+      })
+    })
+
+    describe('status 401', () => {
+      it('throws error when user not is authenticated', done => {
+        request
+          .delete('/tasks')
+          .expect(401)
           .end((err, res) => done(err))
       })
     })
