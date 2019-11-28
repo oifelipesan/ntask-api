@@ -64,11 +64,6 @@ module.exports = {
         return badRequestMessage('Password is requerid.', res)
       }
 
-      if (!email)
-        if (await User.findOne({ where: { email } })) {
-          return badRequestMessage('User already exists.', res)
-        }
-
       const user = await User.create(req.body)
 
       const payload = { id: user.id }
