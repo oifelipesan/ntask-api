@@ -16,7 +16,13 @@ app.use(helmet())
 
 app.disable('x-powered-by')
 
-app.use(cors())
+app.use(
+  cors({
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  })
+)
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(auth.initialize())
