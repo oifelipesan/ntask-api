@@ -20,7 +20,7 @@ module.exports = {
           association: 'tasks',
           attributes: { exclude: ['UserId'] }
         },
-        attributes: { exclude: ['id', 'password'] }
+        attributes: { exclude: ['password'] }
       })
 
       return successMessage(user, res)
