@@ -82,7 +82,7 @@ module.exports = {
       const task = await Task.findOne({ where: { id } })
 
       if (!task) {
-        return badRequestMessage('Tasks not found.', res)
+        return notFoundMessage('Tasks not found.', res)
       }
 
       Task.update(req.body, { where: { id, UserId } })
@@ -109,7 +109,7 @@ module.exports = {
       const task = await Task.findOne({ where: { id } })
 
       if (!task) {
-        return badRequestMessage('Could not find task.', res)
+        return notFoundMessage('Could not find task.', res)
       }
 
       Task.destroy({ where: { id, UserId } })
