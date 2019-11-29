@@ -164,13 +164,13 @@ describe('Routes: Tasks', () => {
       })
     })
 
-    describe('status 400', () => {
+    describe('status 404', () => {
       it('throws error when task not found', done => {
         request
           .put('/tasks/0')
           .set('Authorization', `bearer ${token}`)
           .send({ title: 'Travel', done: true, UserId: `${userId}` })
-          .expect(400)
+          .expect(404)
           .end((err, res) => done(err))
       })
     })
@@ -197,13 +197,13 @@ describe('Routes: Tasks', () => {
       })
     })
 
-    describe('status 400', () => {
+    describe('status 404', () => {
       it('throws error when task not found', done => {
         request
           .delete('/tasks/0')
           .set('Authorization', `bearer ${token}`)
           .send({ UserId: `${userId}` })
-          .expect(400)
+          .expect(404)
           .end((err, res) => done(err))
       })
     })
