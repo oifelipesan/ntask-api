@@ -28,6 +28,8 @@ And there's more in the project [package.json](https://github.com/oifelipesan/nt
 
 Router for API Documentation: `/doc`
 
+**_Note:_** Documentation written in Brazilian Portuguese.
+
 ## About
 
 [Building REST APIs with Node.js](https://www.casadocodigo.com.br/products/livro-apis-nodejs) - Visit the Code House website.
