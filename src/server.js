@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 const helmet = require('helmet')
 const auth = require('./app/middlewares/auth')
 const cors = require('cors')
+const morgan = require('morgan')
+const logger = require('./services/logger')
 
 const { port, env } = require('./config')
 const app = express()
@@ -11,6 +13,14 @@ const routerUser = require('./routes/user')
 const routerTask = require('./routes/task')
 const routerAuth = require('./routes/auth')
 const routerApi = require('./routes')
+
+app.use(
+  morgan('common', {
+    stream: {
+      write: message => logger.info(message)
+    }
+  })
+)
 
 app.use(helmet())
 

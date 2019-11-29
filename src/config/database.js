@@ -1,4 +1,5 @@
 require('dotenv').config()
+const logger = require('../services/logger')
 
 module.exports = {
   development: {
@@ -7,6 +8,9 @@ module.exports = {
     password: '',
     dialect: 'sqlite',
     storage: 'ntasks.sqlite',
+    logging: sql => {
+      logger.info(`[${new Date()}] ${sql}`)
+    },
     define: {
       undersored: true
     }
