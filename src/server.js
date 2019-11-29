@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const helmet = require('helmet')
+const compression = require('compression')
 const auth = require('./app/middlewares/auth')
 const cors = require('cors')
 const morgan = require('morgan')
@@ -22,16 +23,15 @@ app.use(
   })
 )
 
-app.use(helmet())
-
-app.disable('x-powered-by')
-
 app.use(
   cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
   })
 )
+
+app.use(helmet())
+app.use(compression())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
