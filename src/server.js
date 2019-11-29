@@ -10,7 +10,7 @@ const app = express()
 const routerUser = require('./routes/user')
 const routerTask = require('./routes/task')
 const routerAuth = require('./routes/auth')
-const routerApi = require('./routes/api')
+const routerApi = require('./routes')
 
 app.use(helmet())
 
@@ -20,6 +20,8 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(auth.initialize())
+
+app.use(express.static('public'))
 
 app.use('/', routerApi)
 app.use('/users', routerUser)
