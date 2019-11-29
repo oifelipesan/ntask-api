@@ -12,6 +12,7 @@ This is an educational project about how to create an API using Node.js with SQL
 - [Passport](http://passportjs.org/) - Middleware for user authentication.
 - [Mocha](https://mochajs.org/) - Test Runner for Node.js.
 - [Chai](https://www.chaijs.com/) - BDD and TDD interface for test implementation.
+- [ApiDoc](https://apidocjs.com/) - Inline Documentation for RESTful web APIs.
 
 And there's more in the project [package.json](https://github.com/oifelipesan/ntask-api/blob/master/package.json).
 
@@ -21,6 +22,11 @@ And there's more in the project [package.json](https://github.com/oifelipesan/nt
 - Access the project directory: `cd ntask-api`
 - Install the dependencies: `yarn install` or `npm install`
 - Start the server: `yarn start` or `npm start`
+- Run tests: `yarn test`
+
+## Documentation
+
+Router for API Documentation: `/doc`
 
 ## About
 
