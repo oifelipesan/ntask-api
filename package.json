@@ -1,13 +1,40 @@
 {
   "name": "ntask-api",
   "version": "1.0.0",
+  "description": "API de gerenciamento de tarefas",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "npm run apidoc && node src/server.js",
+    "apidoc": "apidoc -i src/routes/ -o public/doc",
     "test": "NODE_ENV='test' mocha --opts src/test/mocha.opts src/test/**/*.js",
     "dev": "nodemon src/server.js"
   },
+  "apidoc": {
+    "name": "Documentação - Node Task API",
+    "template": {
+      "forceLanguage": "pt_br"
+    }
+  },
+  "author": {
+    "name": "Felipe dos Santos",
+    "email": "felipesan.cwb@gmail.com",
+    "url": "https://felipesan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oifelipesan/ntask-api"
+  },
+  "keywords": [
+    "API",
+    "Node",
+    "Express",
+    "Rest",
+    "Restfull",
+    "Tasks",
+    "Todo",
+    "List"
+  ],
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
@@ -23,6 +50,7 @@
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
+    "apidoc": "^0.18.0",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "nodemon": "^1.19.3",
