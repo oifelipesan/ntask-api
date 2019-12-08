@@ -2,5 +2,6 @@ node_modules
 .env
 *.sqlite
 ntasks.sqlite
+ntasks_test.sqlite
 /public
 /logs
