@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npm run apidoc && npm run clusters",
+    "start": "npm run apidoc && node src/server.js",
     "clusters": "node clusters.js",
     "apidoc": "apidoc -i src/routes/ -o public/doc",
     "test": "NODE_ENV='test' mocha --opts src/test/mocha.opts src/test/**/*.js",
